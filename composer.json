@@ -1,0 +1,20 @@
+{
+    "name": "sergsokhatskiy/architecture-case",
+    "description": "Clean arcitecture example",
+    "authors": [
+        {
+            "name": "Serg",
+            "email": "seriu_1995@list.ru"
+        }
+    ],
+	"autoload": {
+		"psr-4": { 
+			"CleanPhp\\Invoicer\\": ["src/"]
+		} 
+	},
+    "require": {},
+    "require-dev": {
+        "peridot-php/peridot": "^1.18",
+        "peridot-php/leo": "^1.6"
+    }
+}
