@@ -7,6 +7,12 @@ use CleanPhp\Invoicer\Domain\Entity\Order;
 
 class InvoiceFactory {
 	public function createFromOrder(Order $order) {
-		return new Invoice();
+		$invoice = new Invoice();
+
+		$invoice->setOrder( $order );
+		$invoice->setTotal( $order->getTotal() );
+		$invoice->setInvoiceDate(new \DateTime());
+
+		return $invoice;
 	}
 }
