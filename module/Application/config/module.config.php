@@ -15,25 +15,44 @@ return [
     'router' => [
         'routes' => [
             'home' => [
-                'type' => Literal::class,
+                'type' => 'Literal',
                 'options' => [
                     'route'    => '/',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
+                        'controller' => 'Application\Controller\Index',
                         'action'     => 'index',
                     ],
-                ],
+                ], 
             ],
-            'application' => [
-                'type'    => Segment::class,
+            'customers' => [
+                'type' => 'Segment',
                 'options' => [
-                    'route'    => '/application[/:action]',
+                    'route'    => '/customers',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
+                        'controller' => 'Application\Controller\Customers',
                         'action'     => 'index',
                     ],
-                ],
+                ], 
             ],
+            'orders' => [
+                'type' => 'Segment',
+                'options' => [
+                    'route'    => '/orders',
+                    'defaults' => [
+                        'controller' => 'Application\Controller\Orders',
+                        'action'     => 'index',
+                    ],
+                ], 
+            ],
+            'invoices' => [
+                'type' => 'Segment',
+                'options' => [
+                    'route'    => '/invoices',
+                    'defaults' => [
+                        'controller' => 'Application\Controller\Invoices',
+                    ], 
+                ],
+            ], 
         ],
     ],
     'controllers' => [
